@@ -14,7 +14,7 @@ class SimpleQuadEquationsSolver {
     }
     public static double[] solveQuadraticEquation(double a, double b, double c) {
 
-        double discriminant = Math.pow(b, 2) - 4 * a * c;
+        double discriminant = Math.pow(b, 2) - (4 * a * c);
         if (discriminant > 0) {
             double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
@@ -36,10 +36,10 @@ class SimpleQuadEquationsSolver {
             System.out.println("Нет действительных корней.");
         }
         else if (roots.length == 1) {
-            System.out.println("Дискриминант равен 0. Имеется один действительный корень x = " + roots[0]);
+            System.out.printf("Дискриминант равен 0. Имеется один действительный корень x = %.2f ", roots[0]);
         }
         else {
-            System.out.printf("Дискриминант положительный. Имеются два действительных корня: x1 = %.2d, x2 = %.2d", roots[0], roots[1]);
+            System.out.printf("Дискриминант положительный. Имеются два действительных корня: x1 = %.2f, x2 = %.2f", roots[0], roots[1]);
 
         }
 
